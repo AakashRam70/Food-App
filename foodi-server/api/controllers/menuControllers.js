@@ -33,7 +33,7 @@ const deleteMenuItem = async (req, res) => {
     }
 };
 
-//get single menu item
+// get single menu item
 const singleMenuItem = async (req, res) => {
     const menuId = req.params.id;
     try {

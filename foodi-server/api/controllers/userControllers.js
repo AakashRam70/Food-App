@@ -30,8 +30,10 @@ const createUser = async (req, res) => {
 //delete a user
 const deleteUser = async (req, res) => {
     const userId = req.params.id;
+    console.log(userId)
     try {
         const deleteUser = await User.findOneAndDelete(userId);
+        console.log(deleteUser);
         //If user not found
         if (!deleteUser) {
             return res.status(404).json({ message: "User not found!" });
